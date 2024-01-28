@@ -47,13 +47,15 @@ select = new SlimSelect({
         .then(data => {
           const { url, breeds } = data;
           const { name, description, temperament } = breeds[0];
-          console.log(temperament);
+
           const markup = `
-        <img src="${url}" class ="cat-img">      
+          <div class= "image-box">
+              <img src="${url}" class ="cat-img"> 
+        </div>     
         <div class = "cat-box">
-        <h2 class = "cat-name">${name}</h2>
-        <p class = "description">${description}</p>
-        <p class= "temperament">${temperament}</p>
+            <h2 class = "cat-name">${name}</h2>
+            <p class = "description">${description}</p>
+            <p class= "temperament">${temperament}</p>
         </div>
          `;
           catInfo.innerHTML = markup;

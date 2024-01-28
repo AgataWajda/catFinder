@@ -4,32 +4,86 @@ body {
 
 .cat-info {
   display: flex;
+  flex-wrap: wrap;
   gap: 5%;
   padding-top: 20px;
 }
 
-.cat-img {
-  width: 40%;
+.image-box {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.cat-box {
-  display: inline-block;
-  width: 40%;
-  padding-right: 10%;
+@media screen and (min-width: 720px) {
+  .image-box {
+    width: 40vw;
+    padding-top: 35px;
+  }
+}
+
+.cat-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+@media screen and (min-width: 720px) {
+  .cat-box {
+    display: inline-block;
+    width: 40%;
+  }
 }
 
 .cat-name {
-  font-size: 36px;
+  text-align: center;
+  font-size: 26px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 720px) {
+  .cat-name {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 950px) {
+  .cat-name {
+    font-size: 36px;
+  }
 }
 
 .temperament {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
+  text-align: center;
 }
 
+@media screen and (min-width: 720px) {
+  .temperament {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .temperament {
+    font-size: 20px;
+  }
+}
 .description {
-  font-size: 18px;
+  text-align: center;
+  font-size: 16px;
+  transition: 20s ease-in-out;
+}
+
+@media screen and (min-width: 720px) {
+  .description {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .description {
+    font-size: 18px;
+  }
 }
 
 .loader {
